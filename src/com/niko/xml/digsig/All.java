@@ -6,6 +6,7 @@ import java.nio.file.Paths;
 import java.security.Signature;
 
 public class All {
+
 	/* IS_CHUNKED의 논리값 참일 경우, 76자씩 개행 문자(&#13;)와 함께 인코딩된다. */
 	private static final boolean IS_CHUNKED = false;
 	private static final Nrypto util = new Nrypto();
@@ -72,7 +73,7 @@ public class All {
 		// String privateKeyPath = "keys" + File.separator + "private.key";
 		// String publicKeyPath = "keys" + File.separator + "public.key";
 		GenDigSigXml.generateXMLDigitalSignature(oriXmlPath, destSignedXmlPath, privateKeyPath, publicKeyPath);
-		
+
 		return destSignedXmlPath;
 	}
 

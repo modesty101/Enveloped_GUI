@@ -3,6 +3,7 @@ package application;
 import java.io.File;
 
 import com.niko.xml.digsig.All;
+import com.niko.xml.digsig.ExtractXml;
 import com.niko.xml.digsig.Verification;
 
 import javafx.event.ActionEvent;
@@ -26,7 +27,9 @@ public class MainController {
 	@FXML
 	private Button verifyDoc;
 	@FXML
-	private Button extract;
+	private Button extractFile;
+	@FXML
+	private Button extractDoc;
 	@FXML
 	private RadioButton rbFile;
 	@FXML
@@ -110,10 +113,14 @@ public class MainController {
 		Verification.testSignedXML(resultDoc.getText());
 	}
 
-	public void extractAction(ActionEvent event) {
-
+	public void extractFileAction(ActionEvent event) throws Exception {
+		ExtractXml.main(resultFile.getText());
 	}
-
+	
+	public void extractDocAction(ActionEvent event) throws Exception {
+		ExtractXml.main(resultDoc.getText());
+	}
+	
 	public void rbFileAction(ActionEvent event) throws Exception {
 		String message = "파일을 선택하셨습니다.";
 		if (rbFile.isSelected()) {
