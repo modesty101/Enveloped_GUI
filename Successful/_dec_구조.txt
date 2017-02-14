@@ -1,0 +1,194 @@
+[01] 일차(2014-08-09) / 토요일
+운영체제 셋팅
+기본 보안 단어 이해
+- 파일의 변조 및 이해
+- 백도어, 루트킷
+NIC Promiscuous 모드
+보안 프로그램 활용 #1 - chkrootkit 루트킷 체크
+보안 프로그램 활용 #2 - rootkithunter 루트킷 체크
+PROXY 활용 및 취약성
+
+
+[02] 일차(2014-08-10) / 일요일
+보안 프로그램 활용 #3 - fcheck 무결성 체크
+보안 프로그램 활용 #4 - ossec
+Media_Wiki_Server
+서비스 관리와 문제 해결
+PAM 인증
+ulimit 활룡한 리소스 제한
+lsattr, chattr 리눅스 속성 파일 관리
+suid,sgid 보안 설정
+ > 쉘스크립트로 root 권한 획득 
+커널 파라미터 최적화
+
+
+[03] 일차(2014-08-16) / 토요일
+tcpdump 활용 및 telnet root 암호 찾기
+서버 성능 체크 스크립트(메모리 정보 출력 스크립트 실습)
+Server Alive 프로그램 실무 
+RRDTool과 cacti 네트워크 모니터링
+암호 관리 체계 및 파일 관리 방법
+
+[04] 일차(2014-06-17) / 일요일
+암호 크래킹 john the ripper 활용
+쉘로깅 관리 방안
+커널 업데이트 및 원복 작업
+grub 암호 걸기
+samba&swat
+su 권한 획득
+호스트 기반 제어방식 - tcpwrapper
+
+
+[05] 일차(2014-08-23) / 토요일
+rlogin_rsh_rcp_wget 원격 명령어 관리 및 활용
+NAS(Network Attached Storage)
+swap 실무 개론
+ssh 보안, webssh
+lsof 보안 도구 활용
+커널 관리 파일
+
+[06] 일차(2014-08-24) / 일요일
+apache 웹 서버 보안
+apache 보안 웹 서버 구축
+apache 웹로그 분석 - webalizer
+apache 보안 모듈 - mod_evasive
+nmap과 portsentry - 스캔하고 차단하기
+scanlogd 로그 스캔 활용
+
+
+[07] 일차(2014-08-30) / 토요일
+리눅스 시스템 응급 복구 및 장애 처리
+syslog와 logrotate
+rsync 원격 네트워크 백업 서버 구축 실무
+
+
+서비스 모니터링 프로그램 : zabbix
+skill - send a signal or report process status
+ KILL, STOP, CONT
+시스템 모니터링
+(01) while 문법 //  (02) tail CMD
+사용자 실시간 정보 확인 - whowatch
+iptraf - 네트워크 패킷 모니터링
+yum 미러 서버 구축 및 보안 설정
+vmstat 시스템 모니터링 도구
+
+/etc/hosts  여러가지 기능
+ -> 스캔할때 아이피 기록 안남기기
+ -> alias 기능으로 웹서버 응답 확인
+
+
+[08] 일차(2014-08-31) / 일요일
+리눅스 네트워크 고급 관리 및 bonding 실무
+RAID와 LVM 구성
+리눅스 커널 내장 방화벽 - iptables
+DNS 구축 및 운영 그리고 보안, nslookup
+DNS 이중화, Round Robin
+가상사설망 VPN(Virtual Private Network)
+ 
+==============================================================
+Linux System Management Project
+finger 개론과 실무
+quota(쿼타) 디스크 사용 량 제한 
+tripwire 보안도구 활용  
+ 
+
+
+[01] 일차
+OT& 리눅스 강의 준비
+리눅스 소개, 가상 머신 활용
+리눅스 종류, 자격증 소개
+리눅스 설치 CentOS 6.4
+원격 접속(Putty)
+ 
+[02] 일차
+명령어 형식과 man 명령
+시스템 종료와 재부팅
+vi 편집기
+기본 명령어(디렉토리 관리)
+quote markstation 기호의 의미
+[실습] alias 기능
+인터렉티브 모드의 이해
+기본 명령어(파일 관리)
+
+[03] 일차(2014-09-20 : 토요일)
+런레벨 의미 및 실습
+기본 네트워크 관리
+[실습] NIC 추가 - telnet 서비스
+디렉토리 구조
+[실습] CDROM 연결 작업
+시간관리와 중요성
+
+[04] 4일차(2014-09-21 : 일요일)
+패키지 관리(rpm,yum)
+wget 명령어 실무
+로그 관리
+tail과 head
+파일시스템과 관리 명령어
+[실습] HDD 추가 작업 실무
+[실습] root 암호 분실시 복구 방법
+압축 관리 tar,gzip,bzip2 명령어
+
+
+[05] 일차(2014-09-27 : 토요일)
+메모리&프로세스 관리
+ftp 서버 구축(vsftpd)
+ftp 명령어 활용/윈도우즈에서 ftp 구축/파일질라
+su 사용자 전환 명령어
+passwd 암호 변경 명령어
+dd 파일 생성 및 디스크 복제
+
+
+[06] 일차(2014-09-28 : 일요일)
+권한 설정, 특수 권한, umask
+쉘스크립트로 root 권한 획득
+리눅스 서비스 관리
+job 스케줄링
+파일의 종류
+계정 관리 매커니즘
+서버와 메시지 통신 - mesg_talk_wall_write 
+
+[07] 일차(2014-10-04 : 토요일)
+컴파일러 gcc와 make 컴파일 작업
+리눅스에서 특정 실행 파일을 실행할 수 있는 방법 
+작업 관리
+그룹 관리
+su 권한 획득
+samba&swat
+rlogin_rsh_rcp_wget 원격 명령어 관리 및 활용
+
+
+[08] 일차(2014-10-05 : 일요일)
+APM 설치와 운영
+웹서버 구축(제로보드 활용)
+mysql 기본 관리
+WordPress : http://ko.wordpress.org/
+
+swap 실무 개론
+NAS(Network Attached Storage)
+호스트 기반 제어방식 - tcpwrapper
+
+
+■ 실습 내용
+--- 완료 ---
+런레벨 변경 실습
+NIC 추가 - telnet 서비스
+CDROM 연결 작업
+[실습] HDD 추가 작업 실무
+[실습] root 암호 분실시 복구 방법
+X2Go Client
+X-Manager(시스템 통합 관리를 위한 최적의 네트워크 솔루션)
+WinSCP 프로그램 소개
+
+--- 미 완료 ---
+VMwareTools 프로그램 설치(리눅스 해상도 변경 프로그램)
+nateon(리눅스 체팅 프로그램)
+Open Office/리브레 오피스(무료 오피스 프로그램)
+
+
+■ 기타 내용
+mysql Quary Browser : http://dev.mysql.com/downloads/gui-tools/5.0.html
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'itclass' WITH GRANT OPTION;
+
+
+
+

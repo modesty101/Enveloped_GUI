@@ -29,8 +29,8 @@ public class Verification {
 	/**
 	 * 테스트 - 서명된 XML 문서가 옳은지 검사합니다.
 	 */
-	public static void testSignedXML() {
-		String signedXmlPath = "SignedAngel.xml";
+	public static void testSignedXML(String signedXml) {
+		String signedXmlPath = signedXml;
 		String publicKeyPath = "keys" + File.separator + "public.key";
 		// String publicKeyPath = "publickey";
 
@@ -69,7 +69,7 @@ public class Verification {
 			e.printStackTrace();
 		}
 		
-		testSignedXML();
+		// testSignedXML();
 		testSignedTamperedXMLDoc();
 	}
 
