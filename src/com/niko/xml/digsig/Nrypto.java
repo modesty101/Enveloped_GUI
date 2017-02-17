@@ -24,8 +24,7 @@ public class Nrypto {
 	private static final String ALGORITHM = "RSA";
 
 	/**
-	 * 공개키와 개인키를 1024 바이트로 생성한다. 
-	 * 그리고 공개키와 개인키를 저장한다. (Public.key / Private.key)
+	 * 공개키와 개인키를 1024 바이트로 생성한다. 그리고 공개키와 개인키를 저장한다. (Public.key / Private.key)
 	 * 
 	 * @throws NoSuchAlgorithmException
 	 */
@@ -49,7 +48,8 @@ public class Nrypto {
 	/**
 	 * 개인키를 생성한다.
 	 * 
-	 * @param filePath , 개인키의 경로
+	 * @param filePath
+	 *            , 개인키의 경로
 	 * @return privateKey
 	 */
 	public PrivateKey storedPrivateKey(String filePath) {
@@ -78,7 +78,8 @@ public class Nrypto {
 	/**
 	 * 공개키를 생성한다
 	 * 
-	 * @param filePath , 공개키의 경로
+	 * @param filePath
+	 *            , 공개키의 경로
 	 * @return publicKey
 	 */
 	public PublicKey storedPublicKey(String filePath) {
@@ -111,21 +112,24 @@ public class Nrypto {
 	 * @param dirPath
 	 */
 	public void storeKeyPair(String dirPath) {
-		// 키 쌍 -> 생성 함수 호출
-		KeyPair keyPair = generateKeyPair();
-		// 키 쌍에서 privatekey를 리턴
-		PrivateKey privateKey = keyPair.getPrivate();
-		// 키 쌍에서 pulbickey를 리턴
-		PublicKey publicKey = keyPair.getPublic();
+		
+			// 키 쌍 -> 생성 함수 호출
+			KeyPair keyPair = generateKeyPair();
+			// 키 쌍에서 privatekey를 리턴
+			PrivateKey privateKey = keyPair.getPrivate();
+			// 키 쌍에서 pulbickey를 리턴
+			PublicKey publicKey = keyPair.getPublic();
 
-		storeKeys(dirPath + File.separator + "public.key", publicKey);
-		storeKeys(dirPath + File.separator + "private.key", privateKey);
+			storeKeys(dirPath + File.separator + "public.key", publicKey);
+			storeKeys(dirPath + File.separator + "private.key", privateKey);
+		
 	}
 
 	/**
 	 * 공개/개인 키를 저장한다.
 	 * 
-	 * @param filePath , 파일의 이름
+	 * @param filePath
+	 *            , 파일의 이름
 	 * @param key
 	 */
 	private void storeKeys(String filePath, Key key) {
@@ -133,6 +137,7 @@ public class Nrypto {
 		byte[] keyBytes = key.getEncoded();
 		// 출력 스트림 준비
 		OutputStream outputStream = null;
+
 		try {
 			// 파일경로에 인코딩된 키를 저장한다
 			outputStream = new FileOutputStream(filePath);

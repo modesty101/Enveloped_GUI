@@ -1,10 +1,6 @@
 package com.niko.xml.digsig;
 
-import java.io.BufferedOutputStream;
 import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
@@ -15,7 +11,12 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 public class ExtractXml {
-
+	/**
+	 * XML 파일에서 값을 추출한다.
+	 * 
+	 * @param fileName
+	 * @throws Exception
+	 */
 	public static void extractSigXml(String fileName) throws Exception {
 		File xmlFile = new File(fileName);
 
@@ -26,7 +27,7 @@ public class ExtractXml {
 		Node node = null;
 		Node nd = null;
 		NodeList nList = doc.getElementsByTagName("firstname");
-		String str=null;
+		String str = null;
 		for (int i = 0; i < nList.getLength(); i++) {
 			node = nList.item(i);
 			if (node.getNodeType() == Node.ELEMENT_NODE) {
@@ -42,17 +43,8 @@ public class ExtractXml {
 		}
 		byte[] bytes = str.getBytes();
 		byte[] dec = Base64.decodeBase64(bytes);
-		
-		writeFile(fileName+"_ORIGINAL", dec);
-	}
 
-
-	public static void writeFile(String fileName, byte[] encodedFile) throws IOException {
-		File file = new File(fileName);
-		BufferedOutputStream writer = new BufferedOutputStream(new FileOutputStream(file));
-		writer.write(encodedFile);
-		writer.flush();
-		writer.close();
+		FileIO.writeFile(fileName + "_ORIGINAL", dec);
 	}
 
 	public static void main(String fileName) throws Exception {
